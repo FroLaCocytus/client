@@ -10,8 +10,6 @@ import { Context } from "../index";
 import { HOME_ROUTE } from "../utils/consts";
 
 
-//import "../style.css"
-
 const Auth = observer(() => {
   const { user } = useContext(Context)
 
