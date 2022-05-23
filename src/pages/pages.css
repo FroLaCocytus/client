@@ -1,0 +1,16 @@
+#root {
+    height: 100%;
+}
+.auth {
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.black {
+    
+    background-color: black;
+    height: 100px;
+    width: 100px;
+}

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 import { Button } from "react-bootstrap";
 import TruckList from "../components/TruckList";
+import RightColumn from "../components/RightColumn/RightColumn";
 import TruckPaggination from "../components/TruckPaggination";
 import { observer } from "mobx-react-lite";
 import { Context } from "../index";
@@ -21,13 +22,16 @@ const Autopark = observer(() => {
 
 
   return (
+    <div style={{height: "auto"}}>
       <Sidebar>
-        <TruckPaggination/>
-        <TruckList/>
-        <Button className="mt-4 p-2" onClick = {()=>setTruckVisible(true)}>Добавить транспортное средство</Button>
-        <CreateTruck show={truckVisible} onHide={()=> setTruckVisible(false)}/>
+        <RightColumn>
+          <TruckPaggination/>
+          <TruckList/>
+          <Button className="mt-4 p-2" onClick = {()=>setTruckVisible(true)}>Добавить транспортное средство</Button>
+          <CreateTruck show={truckVisible} onHide={()=> setTruckVisible(false)}/>
+          </RightColumn>
       </Sidebar>
-
+    </div>
   );
 });
 

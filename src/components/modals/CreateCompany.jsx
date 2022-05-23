@@ -20,6 +20,7 @@ const CreateCompany = ({show, onHide}) => {
       onHide={onHide}
       size="lg"
       centered
+      style={{height: "auto"}}
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">

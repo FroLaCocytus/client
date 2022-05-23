@@ -21,11 +21,3 @@ export const SidebarData = [
         path: ANALYTIC_ROUTE
     }
 ]
-
-export const SidebarDataAdmin = [
-    {   
-        title: "Добавить пользователя",
-        icon: <FaUserPlus />,
-        path: ADDUSER_ROUTE
-    }
-]

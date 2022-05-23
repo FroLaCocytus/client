@@ -5,9 +5,9 @@ import { Context } from "../index";
 const TruckPaggination = observer(() => {
     const {truck} = useContext(Context)
   return (
-    <div>
-        <div>Ваш автопарк</div>
-        <div>{truck.trucks.length} машины</div>
+    <div style={{height: "auto"}}>
+        <div >Ваш автопарк</div>
+        <div >{truck.trucks.length} машины</div>
     </div>
   );
 });

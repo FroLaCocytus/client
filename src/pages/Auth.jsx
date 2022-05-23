@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Container, Form } from "react-bootstrap";
 import { useNavigate  } from 'react-router-dom'
 import Card from "react-bootstrap/Card";
@@ -16,16 +16,12 @@ const Auth = observer(() => {
   const navigate = useNavigate ()
   const [log, setLogin] = useState("")
   const [password, setPassword] = useState("")
-
   const signIn = async () =>{
     try {
-      console.log("я зашёл")
       let data
       data = await login(log, password)
       user.setUser(user)
       user.setIsAuth(true)
-      console.log("я Вышел")
-
       navigate(HOME_ROUTE)
     } catch (e) {
       alert(e.response.data.message)
@@ -33,8 +29,8 @@ const Auth = observer(() => {
   }
 
   return (
-    <Container className="d-flex justify-content-center align-items-center p-0 m-0" style={{height:window.innerHeight - 54}}>
-      <Card style={{width:600}} className="p-5">
+    <Container className="h-100 d-flex justify-content-center align-items-center p-0 m-0" style={{height:window.innerHeight - 54}}>
+      <Card style={{height:300, width:500}}  className="p-5">
         <h2 className="m-auto">Вход на платформу</h2>
         <Form className="d-flex flex-column">
           <Form.Control 
@@ -58,6 +54,7 @@ const Auth = observer(() => {
           </Row>
         </Form>
       </Card>
+      
     </Container>
   );
 });

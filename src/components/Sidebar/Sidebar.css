@@ -1,54 +1,74 @@
-*{
-    margin:0;
-    padding:0;
-    text-decoration: none;
-}
+
 .container{
-    display:flex;
+    background-color: white;
     width: 100%;
-    margin:0;       
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
+
 main{
-    width: 100%;
-    padding: 20px;
+    padding-left: 230px;
+    height: 100%;
 }
 .sidebar{
-    background: #000;
-    color: #fff;
-    height: 100vh;
-    width: 30%;
+    position: absolute ;
+    background: #E9F1FB;
+    height: 100%;
+    width: 230px;
     transition: all 0.5s;
 }
 .top_section{
     display: flex;
     align-items:center;
     padding:20px 15px;
+    height: 100px;
 }
 .logo{
-    font-size: 30px;
+    width: 160px;
+    height: 48px;
+    margin-left: 10px;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0;
 }
-.bars{
-    display: flex;
-    font-size: 25px;
-    margin-left: 50px;
+.logo span{
+    color: #6C92D7;
+}
+.list {
+    height: auto;
+    padding-top: 100px;
+    margin-left: 10px;
 }
 .link{
     display: flex;
-    color: #fff;
-    padding: 10px 15px;
+    color: #717A7F;
+    margin-top: 40px;
+    margin-bottom: 60px;
+
+    width: 100%;
+    height: 40px;
     gap: 15px;
     transition: all 0.5s;
 }
 .link:hover{
-    background:lightskyblue;
-    color: #000;
+    color: #6C92D7;
     transition: all 0.5s;
 }
 .active{
-    background: lightskyblue;
-    color: #000;
+    color: #6C92D7;
 }
-.icon, .link_text{
-    font-size: 20px;
+.icon {
+    padding-left: 25px;
+    line-height: 100%;
+    font-size: 30px;
+}
+
+.link_text {
+    padding-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
 }

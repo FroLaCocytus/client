@@ -1,0 +1,13 @@
+.box {
+    height: 100%;
+    width: 400px;
+    top:0;
+    right: 0;
+    background-color: #E9F1FB;
+    position: absolute;
+}
+
+info{
+    padding-right: 400px;
+    height: 100%;
+}
