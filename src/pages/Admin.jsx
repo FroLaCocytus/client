@@ -1,9 +1,9 @@
 import React, { useState, useContext } from "react";
-import { Container, Button } from "react-bootstrap";
+import { Container, Button, Card } from "react-bootstrap";
 import CreateUser from "../components/modals/CreateUser";
 import CreateCompany from "../components/modals/CreateCompany";
-import Sidebar from "../components/Sidebar/Sidebar";
 import { Context } from '../index'
+import "./pages.css"
 
 
 const Admin = () => {
@@ -19,13 +19,16 @@ const Admin = () => {
   }
 
   return (
-    <Container className="d-flex flex-column">
-      <Button className="mt-4 p-2" onClick = {()=>setUserVisible(true)}>Добавить пользователя</Button>
-      <Button className="mt-4 p-2" onClick = {()=>setCompanyVisible(true)}>Добавить компанию</Button>
+    <Container className="h-100 d-flex justify-content-center align-items-center p-0 m-0" style={{height:window.innerHeight - 54}}>
+      <Card style={{height:400, width:700}}  className="admin">
+      <h2 className="title">Админ</h2>
+        <Button className="b-user" onClick = {()=>setUserVisible(true)}>Добавить пользователя</Button>
+        <Button className="b-company" onClick = {()=>setCompanyVisible(true)}>Добавить компанию</Button>
 
-      <CreateUser show={userVisible} onHide={()=> setUserVisible(false)}/>
-      <CreateCompany show={companyVisible} onHide={()=> setCompanyVisible(false)}/> 
-      <Button variant="primary" onClick={logOut}>Выйти</Button>
+        <CreateUser show={userVisible} onHide={()=> setUserVisible(false)}/>
+        <CreateCompany show={companyVisible} onHide={()=> setCompanyVisible(false)}/> 
+        <Button className="b-logout" variant="dark" onClick={logOut}>Выйти</Button>
+      </Card>
     </Container>
   );
 };

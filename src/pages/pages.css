@@ -1,6 +1,8 @@
 #root {
     height: 100%;
 }
+
+/*______________Страница авторизации______________*/
 .auth {
     height: 500px;
     width: 500px;
@@ -8,6 +10,54 @@
     display: flex;
     justify-content: center;
 }
+/*______________Страница админа______________*/
+.admin {
+    padding: 20px;
+    display: grid;
+    grid-template-columns : repeat(20, 5%);
+    grid-template-rows : repeat(20, 5%);
+}
+
+.admin .title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    grid-column-start: 8;
+    grid-column-end: 15;
+    text-align: center;
+}
+.admin .b-user {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    grid-column-start: 6;
+    grid-column-end: 17;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    text-align: center;
+}
+
+.admin .b-company {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    grid-column-start: 6;
+    grid-column-end: 17;
+    grid-row-start: 9;
+    grid-row-end: 11;
+    text-align: center;
+}
+
+.admin .b-logout {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    grid-column-start: 6;
+    grid-column-end: 17;
+    grid-row-start: 12;
+    grid-row-end: 14;
+    text-align: center;
+}
+
+/*______________Главная страница______________*/
+
 .black {
     
     background-color: black;

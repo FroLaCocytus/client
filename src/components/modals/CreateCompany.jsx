@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Button, Form} from "react-bootstrap";
 import Modal from 'react-bootstrap/Modal'
 import { createCompany } from "../../http/companyAPI";
+import { fetchCompanies } from "../../http/companyAPI";
+import { Context } from "../../index";
+
 
 const CreateCompany = ({show, onHide}) => {
     const [name, setName] = useState("")
+    const {truck} = useContext(Context)
 
 
     const addCompany = async () => {
         createCompany({name: name}).then(data => {
+          fetchCompanies().then(data => truck.setCompanies(data))
           setName('')
           onHide()
         })

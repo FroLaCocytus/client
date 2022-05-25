@@ -19,7 +19,13 @@ const CreateUser = observer(({show, onHide}) => {
 
 
     const regIn = async () =>{
-      const response = await registration(log, password, role, truck.selectedCompany.id)
+      const response = await registration(log, password, role, truck.selectedCompany.id).then(() => {
+        setLogin('')
+        setPassword('')
+        setRole('')
+        onHide()
+        alert('Успешно!')
+      })
     }
 
     useEffect(() => {
