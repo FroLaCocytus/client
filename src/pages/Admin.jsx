@@ -14,7 +14,7 @@ const Admin = () => {
   const logOut = () => {
     user.setUser({})
     user.setIsAuth(false)
-    user.setIsAdmin(false)
+    user.setRole({})
     localStorage.removeItem('token')
   }
 

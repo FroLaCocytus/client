@@ -15,6 +15,7 @@ const App = observer(() => {
     check().then(data => {
       user.setUser(true)
       user.setIsAuth(true)
+      user.setRole(data.role)
     }).finally( () => setLoading(false))
   }, [])
 

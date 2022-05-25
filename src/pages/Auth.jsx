@@ -19,10 +19,12 @@ const Auth = observer(() => {
   const signIn = async () =>{
     try {
       let data
-      data = await login(log, password)
-      user.setUser(user)
-      user.setIsAuth(true)
-      navigate(HOME_ROUTE)
+      data = await login(log, password).then((data) => {
+        user.setUser(user)
+        user.setIsAuth(true)
+        user.setRole(data.role)
+      })
+      navigate('/')
     } catch (e) {
       alert(e.response.data.message)
     }

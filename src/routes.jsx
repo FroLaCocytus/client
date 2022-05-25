@@ -13,15 +13,16 @@ import {
   ANALYTIC_ROUTE
 } from "./utils/consts";
 
-
+export const authAdminRoutes = [
+  {
+    path: ADDUSER_ROUTE,
+    Element: <Admin />
+  }
+]
 export const authRoutes = [
   {
     path: HOME_ROUTE,
     Element: <Home />
-  },
-  {
-    path: ADDUSER_ROUTE,
-    Element: <Admin />
   },
   {
     path: TRUCK_ROUTE + "/:id",
