@@ -1,9 +1,20 @@
 import React, { useContext } from "react";
-import "./Sidebar.css"
+import "./Shell.css"
 import { SidebarData } from "./SidebarData"
 import { NavLink } from "react-router-dom"
+import { Button } from "react-bootstrap";
+import { Context } from '../../index'
 
-const Sidebar = ( {children} ) => {
+
+const Shell = ( {children} ) => {
+  const {user} = useContext(Context)
+  
+  const logOut = () => {
+    user.setUser({})
+    user.setIsAuth(false)
+    user.setRole({})
+    localStorage.removeItem('token')
+  }
 
   return (
     <>
@@ -24,10 +35,13 @@ const Sidebar = ( {children} ) => {
           }
         </div>
       </div>
+      <div className="box">
+        <Button variant="primary" onClick={logOut}>Выйти</Button>
+      </div>
       <main>{children}</main>
     </div>
     </>
   );
 };
 
-export default Sidebar;
+export default Shell;

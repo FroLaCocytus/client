@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import Sidebar from "../components/Sidebar/Sidebar";
+import Shell from "../components/Shell/Shell";
 import { Context } from "../index";
 import { fetchCompanies } from "../http/companyAPI";
 import { observer } from "mobx-react-lite";
 import "./pages.css"
-import RightColumn from "../components/RightColumn/RightColumn";
 
 
 const Home = observer(() => {
@@ -19,13 +18,10 @@ const Home = observer(() => {
   }, [])
 
   return (
-    <div style={{height:"auto"}}>
-      <Sidebar>
-        <RightColumn>
+      <Shell>
           <div className="black"></div>
-        </RightColumn>
-      </Sidebar>
-    </div>
+          <div className="black"></div>
+      </Shell>
   );
 });
 

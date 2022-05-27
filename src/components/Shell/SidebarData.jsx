@@ -1,7 +1,7 @@
 import React from "react";
 
-import { ADDUSER_ROUTE, ANALYTIC_ROUTE, AUTOPARK_ROUTE, HOME_ROUTE } from "../../utils/consts";
-import { FaHome, FaTruck, FaUserPlus } from "react-icons/fa"
+import { ANALYTIC_ROUTE, AUTOPARK_ROUTE, HOME_ROUTE } from "../../utils/consts";
+import { FaHome, FaTruck } from "react-icons/fa"
 import { MdAutoGraph } from "react-icons/md"
 
 export const SidebarData = [

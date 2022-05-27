@@ -1,11 +1,11 @@
 import React from "react";
-import Sidebar from "../components/Sidebar/Sidebar";
+import Shell from "../components/Shell/Shell";
 
 const Analytic = () => {
   return (
-    <Sidebar>
+    <Shell>
         <div>Аналитика</div>
-    </Sidebar>
+    </Shell>
   );
 };
 
