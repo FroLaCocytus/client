@@ -22,7 +22,7 @@ const CreateUser = observer(({show, onHide}) => {
       const response = await registration(log, password, role, truck.selectedCompany.id).then(() => {
         setLogin('')
         setPassword('')
-        setRole('')
+        setRole("USER")
         onHide()
         alert('Успешно!')
       })
@@ -60,7 +60,7 @@ const CreateUser = observer(({show, onHide}) => {
             />
             <Dropdown className="mt-2 mb-2">
                 <Dropdown.Toggle>{truck.selectedCompany.name || "Выберите тип"}</Dropdown.Toggle>
-                <Dropdown.Menu>
+                <Dropdown.Menu style={{height: "auto"}}>
                     {truck.companies.map(company =>
                         <Dropdown.Item
                             onClick={() => truck.setSelectedCompany(company)}

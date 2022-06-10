@@ -1,17 +1,21 @@
 import {$authHost, $host} from "./index";
 
-export const createTruck = async (truck) => {
-    const {data} = await $authHost.post('/api/truck', truck)
+export const createTruck = async (model, number, regionNumber, companyId) => {
+    const {data} = await $authHost.post('/api/truck', {model, number, regionNumber, companyId})
     return data
 }
 
-export const fetchTrucks = async () => {
-    const {data} = await $host.get('/api/truck')
+export const fetchTrucks = async (page, limit, companyId) => {
+    const {data} = await $host.get('/api/truck', {params: {
+        page, limit, companyId
+    }})
     return data
 }
 
-export const fetchOneTrucks = async (id) => {
-    const {data} = await $authHost.get('/api/truck' + id )
+export const fetchOneTrucks = async (id, companyId) => {
+    const {data} = await $authHost.get('/api/truck/' + id, {params: {
+        companyId
+    }})
     return data 
 }
 

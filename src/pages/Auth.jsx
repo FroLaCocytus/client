@@ -7,8 +7,6 @@ import Row from "react-bootstrap/Row";
 import { login } from "../http/userAPI";
 import { observer } from "mobx-react-lite";
 import { Context } from "../index";
-import { HOME_ROUTE } from "../utils/consts";
-
 
 const Auth = observer(() => {
   const { user } = useContext(Context)
@@ -23,6 +21,7 @@ const Auth = observer(() => {
         user.setUser(user)
         user.setIsAuth(true)
         user.setRole(data.role)
+        user.setCompany(data.companyId)
       })
       navigate('/')
     } catch (e) {

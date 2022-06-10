@@ -1,17 +1,21 @@
+import React, { useContext, useEffect } from "react";
 import { observer } from "mobx-react-lite";
-import React, { useContext } from "react";
+
 import { Row } from "react-bootstrap";
 import { Context } from "../index";
 import TruckItem from "./TruckItem";
 
-const TruckList = observer(() => {
+const TruckList = observer(({setSelectedItem}) => {
 const {truck} = useContext(Context)
+
   return (
-    <Row className="d-flex">
-        {truck.trucks.map(truck => {
-           return <TruckItem key={truck.id} truck={truck} />
-        })}
-    </Row>
+    <div style={{width: "100%", paddingLeft: "30px", height: "auto"}}>
+      <Row style={{width: "100%", margin:"0"}} className="d-flex">
+          {truck.trucks.map(truck => {
+            return <TruckItem key={truck.id} truck={truck} setSelectedItem={setSelectedItem} />
+          })}
+      </Row>
+    </div>
   );
 });
 

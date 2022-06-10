@@ -5,7 +5,13 @@ export default class UserStore {
     this._isAuth = false;
     this._user = {};
     this._role = {};
+    this._company = {};
+
     makeAutoObservable(this);
+  }
+
+  setCompany(company) {
+    this._company = company;
   }
 
   setIsAuth(bool) {
@@ -20,6 +26,10 @@ export default class UserStore {
     this._role = role;
   }
 
+  get company() {
+    return this._company;
+  }
+  
   get isAuth() {
     return this._isAuth;
   }

@@ -1,25 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Button, Form} from "react-bootstrap";
 import Modal from 'react-bootstrap/Modal'
-import { registration } from "../../http/userAPI";
-
-const CreateTruck = ({show, onHide}) => {
-    const [model, setModel] = useState("")
-    const [number, setNumber] = useState("")
-    const [regionNumber, setRegionNumber] = useState("")
-    const [file, setFile] = useState("")
+import { createTruck } from "../../http/truckAPI";
+import { Context } from "../../index";
+import { fetchTrucks } from "../../http/truckAPI";
 
 
-    const selectFile = e => {
-      setFile(e.target.files[0])
-    }
+const CreateTruck = ({show, onHide, setSelectedItem}) => {
+  const [model, setModel] = useState("")
+  const [number, setNumber] = useState("")
+  const [regionNumber, setRegionNumber] = useState("")
+  const {user} = useContext(Context)
+  const {truck} = useContext(Context)
 
-    const addTruck = async () =>{
-      
-    }
-  
+
+
+
+  const addTruck = async () =>{
+    const response = await createTruck(model, number, regionNumber, user.company).then(() => {
+      fetchTrucks(truck.page, 6, user.company).then(data => {
+        truck.setTrucks(data.rows)
+        truck.setTotalCount(data.count)
+        if (truck.trucks.length > 0) setSelectedItem(truck.trucks[0])
+      })
+      setModel('')
+      setNumber('')
+      setRegionNumber('')
+      onHide()
+      alert('Успешно!')
+    })
+  }
+
+
+
   return (
     <Modal
+      style={{height: "auto"}}
       show={show}
       onHide={onHide}
       size="lg"
@@ -41,17 +57,13 @@ const CreateTruck = ({show, onHide}) => {
               placeholder={'Введите номер транспортного средства'}
               value={number} 
               onChange={e => setNumber(e.target.value)}
+              style={{textTransform: "uppercase"}}
             />
             <Form.Control 
               placeholder={'Введите номер региона'}
               value={regionNumber} 
               onChange={e => setRegionNumber(e.target.value)}
-            />
-            <Form.Control
-                className="mt-3"
-                type="file"
-                onChange={selectFile}
-            />            
+            /> 
         </Form>
       </Modal.Body>
       <Modal.Footer>

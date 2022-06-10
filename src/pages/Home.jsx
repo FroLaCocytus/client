@@ -3,7 +3,6 @@ import Shell from "../components/Shell/Shell";
 import { Context } from "../index";
 import { fetchCompanies } from "../http/companyAPI";
 import { observer } from "mobx-react-lite";
-import "./pages.css"
 
 
 const Home = observer(() => {
@@ -19,8 +18,14 @@ const Home = observer(() => {
 
   return (
       <Shell>
-          <div className="black"></div>
-          <div className="black"></div>
+          <div style={{
+            height: "auto",
+            fontFamily: "'Montserrat', sans-serif",
+            fontWeight: "600",
+            fontSize: "40px",
+            marginLeft: "60px",
+            marginTop: "30px"
+          }}> Главная</div>
       </Shell>
   );
 });

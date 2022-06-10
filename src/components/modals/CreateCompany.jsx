@@ -16,6 +16,7 @@ const CreateCompany = ({show, onHide}) => {
           fetchCompanies().then(data => truck.setCompanies(data))
           setName('')
           onHide()
+          alert('Успешно!')
         })
     }
   

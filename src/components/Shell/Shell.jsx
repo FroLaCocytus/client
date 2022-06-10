@@ -1,21 +1,18 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./Shell.css"
+import { Image } from "react-bootstrap";
+
 import { SidebarData } from "./SidebarData"
 import { NavLink } from "react-router-dom"
-import { Button } from "react-bootstrap";
-import { Context } from '../../index'
+import { observer } from "mobx-react-lite";
+import imageTruck from '../../img/promt.png';
+
+import Exit from "../Exit";
 
 
-const Shell = ( {children} ) => {
-  const {user} = useContext(Context)
-  
-  const logOut = () => {
-    user.setUser({})
-    user.setIsAuth(false)
-    user.setRole({})
-    localStorage.removeItem('token')
-  }
 
+
+const Shell = observer(( {selectedItem, children} ) => {
   return (
     <>
     <div className="container">
@@ -36,12 +33,38 @@ const Shell = ( {children} ) => {
         </div>
       </div>
       <div className="box">
-        <Button variant="primary" onClick={logOut}>Выйти</Button>
+        {selectedItem != "none" && selectedItem &&
+        <div style={{height: "auto"}}>
+          <div style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: "500", fontSize: "30px", margin: "150px 50px 10px" }}>{selectedItem.model}</div>
+          <Image width={500} height={500} style={{ margin: "20px auto 10px" }} src={imageTruck}/>
+          <div style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: "500", fontSize: "30px", margin: "10px 50px 10px" }}>{selectedItem.number}</div>
+          {
+          selectedItem.enabled 
+          ? 
+          <div style={{
+            fontFamily: "'Montserrat', sans-serif",
+            fontWeight: "500",
+            fontSize: "22px",
+            margin: "30px 50px 10px",
+            color: "rgba(0, 0, 0, .5)",
+          }}>Запущена</div> 
+          :
+          <div style={{
+            fontFamily: "'Montserrat', sans-serif",
+            fontWeight: "500",
+            fontSize: "22px",
+            margin: "30px 50px 10px",
+            color: "rgba(0, 0, 0, .5)",
+          }}>Не запущена</div> 
+          }
+        </div>
+        }
+        <Exit/>
       </div>
       <main>{children}</main>
     </div>
     </>
   );
-};
+});
 
 export default Shell;
