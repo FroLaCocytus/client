@@ -28,7 +28,6 @@ export default class TruckStore {
     }
     setTrucks(trucks) {
         this._trucks = trucks
-        console.log("add")
     }
 
     setSelectedCompany(company){

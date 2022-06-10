@@ -14,8 +14,8 @@ const TruckPage = () => {
   const [truck, setTruck] = useState({})
   const {id} = useParams()
   const {user} = useContext(Context)
-
   useEffect(() => {
+    console.log(user.company)
     fetchOneTrucks(id, user.company).then(data => {
       setTruck(data)
       if(!data) navigate(HOME_ROUTE)

@@ -24,10 +24,6 @@ const Autopark = observer(() => {
     })
   }, [truck.page])
 
-  
-
-
-
   return (
     <div style={{height: "auto"}}>
       <Shell setSelectedItem={setSelectedItem} selectedItem={selectedItem}>
