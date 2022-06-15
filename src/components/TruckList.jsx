@@ -9,7 +9,7 @@ const TruckList = observer(({setSelectedItem}) => {
 const {truck} = useContext(Context)
 
   return (
-    <div style={{width: "100%", paddingLeft: "30px", height: "auto"}}>
+    <div style={{width: "100%", paddingLeft: "25px", height: "auto"}}>
       <Row style={{width: "100%", margin:"0"}} className="d-flex">
           {truck.trucks.map(truck => {
             return <TruckItem key={truck.id} truck={truck} setSelectedItem={setSelectedItem} />

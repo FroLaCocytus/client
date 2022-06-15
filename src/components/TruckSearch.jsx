@@ -6,13 +6,13 @@ import { Context } from "../index";
 const TruckSearch = observer(() => {
     const {truck} = useContext(Context)
   return (
-    <div style={{height: "auto"}}>
+    <div style={{height: "auto", width: "100%"}}>
         <Form.Control
             placeholder={'Введите номер автомобиля'} 
             style={{
                 marginLeft: "30px",
                 marginTop: "30px",
-                width: "600px",
+                width: "500px",
                 height: "50px",
                 backgroundColor: "#E9F1FB",
                 display: "inline-block",

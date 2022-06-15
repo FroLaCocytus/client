@@ -10,6 +10,7 @@ import CreateTruck from "../components/modals/CreateTruck";
 import TruckSearch from "../components/TruckSearch";
 
 
+
 const Autopark = observer(() => {
   const {truck} = useContext(Context)
   const {user} = useContext(Context)
@@ -23,6 +24,10 @@ const Autopark = observer(() => {
         if (truck.trucks.length > 0) setSelectedItem(truck.trucks[0])
     })
   }, [truck.page])
+
+
+
+
 
   return (
     <div style={{height: "auto"}}>

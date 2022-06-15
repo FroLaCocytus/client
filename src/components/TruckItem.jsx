@@ -10,11 +10,11 @@ const TruckItem = ({truck, setSelectedItem}) => {
 
 
   return (
-    <Col md={4}  style={{marginBottom: "30px"}}>
+    <Col md={4}  style={{marginBottom: "25px"}}>
         <Card style ={{
           padding: "0",
-          width: "310px",
-          height: "320px",
+          width: "280px",
+          height: "285px",
           cursor: "pointer",
           backgroundColor: "#E9F1FB",
           borderRadius: "8px",

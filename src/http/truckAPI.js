@@ -5,8 +5,13 @@ export const createTruck = async (model, number, regionNumber, companyId) => {
     return data
 }
 
+export const updateKey = async (id, connect_key) => {
+    const {data} = await $authHost.post('/api/truck//one', {id, connect_key})
+    return data
+}
+
 export const fetchTrucks = async (page, limit, companyId) => {
-    const {data} = await $host.get('/api/truck', {params: {
+    const {data} = await $authHost.get('/api/truck', {params: {
         page, limit, companyId
     }})
     return data

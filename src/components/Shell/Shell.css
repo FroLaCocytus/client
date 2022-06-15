@@ -21,6 +21,14 @@ main{
     width: 230px;
     transition: all 0.5s;
 }
+.box {
+    height: 100%;
+    width: 500px;
+    top:0;
+    right: 0;
+    background-color: #E9F1FB;
+    position: absolute;
+}
 .top_section{
     display: flex;
     align-items:center;
@@ -77,11 +85,3 @@ main{
     font-size: 16px;
 }
 
-.box {
-    height: 100%;
-    width: 500px;
-    top:0;
-    right: 0;
-    background-color: #E9F1FB;
-    position: absolute;
-}
