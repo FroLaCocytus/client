@@ -17,7 +17,7 @@ const CreateTruck = ({show, onHide, setSelectedItem}) => {
 
 
   const addTruck = async () =>{
-    const response = await createTruck(model, number, regionNumber, user.company).then(() => {
+    const response = await createTruck(model, number.toUpperCase(), regionNumber, user.company).then(() => {
       fetchTrucks(truck.page, 6, user.company).then(data => {
         truck.setTrucks(data.rows)
         truck.setTotalCount(data.count)
@@ -57,7 +57,6 @@ const CreateTruck = ({show, onHide, setSelectedItem}) => {
               placeholder={'Введите номер транспортного средства'}
               value={number} 
               onChange={e => setNumber(e.target.value)}
-              style={{textTransform: "uppercase"}}
             />
             <Form.Control 
               placeholder={'Введите номер региона'}

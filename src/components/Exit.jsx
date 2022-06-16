@@ -12,6 +12,7 @@ const Exit = () => {
         user.setIsAuth(false)
         user.setRole({})
         user.setCompany({})
+        user.setLogin({})
         truck.setPage(1)
         localStorage.removeItem('token')
       }

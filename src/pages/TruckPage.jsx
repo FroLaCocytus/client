@@ -51,15 +51,15 @@ const TruckPage = observer(() => {
     <div style={{ display: "flex", fontFamily: "'Montserrat', sans-serif"}}>
       <div style={{height: "100%", width: "500px", backgroundColor: "#E9F1FB"}}>
         <div style={{height: "auto"}} >
-          <Button style={{height: "auto"}} onClick={() => navigate(AUTOPARK_ROUTE)}>Назад</Button>
+          <Button style={{backgroundColor: "#6C92D7", border: "none", height: "auto"}} onClick={() => navigate(AUTOPARK_ROUTE)}>Назад</Button>
 
           <div style={{height: "auto", marginLeft: "30px", marginTop: "30px", fontSize: "50px"}}>{truckNow.model}</div>
           <Image width={500} height={500} style={{height: "auto",margin: "30px auto 10px" }} src={imageTruck}/>
-          <div style={{height: "auto", marginLeft: "30px", marginTop: "30px",}}>
+          <div style={{height: "auto", marginLeft: "30px", marginTop: "30px",fontSize: "30px",}}>
             <div>
               {truckNow.number}
             </div>
-            <div>
+            <div style={{color: "#6C92D7"}}>
               {truckNow.enabled ? 'Работает' : 'Не работает'}
             </div>
           </div>
@@ -69,7 +69,7 @@ const TruckPage = observer(() => {
       <div style={{ width: "100%", display: "flex", justifyContent:"center", alignItems: "center"}}>
         <div style={{height: "auto", display:"flex", flexDirection: "column", alignItems: "center"}} >
           <div  style={{fontSize: "120px", color: "rgba(0, 0, 0,0.2)"}} >Контроллер <br/>не привязан</div>
-          <Button style={{color: ""}} onClick={()=>setTruckVisible(true)}>Привязать контроллер</Button>
+          <Button style={{backgroundColor: "#6C92D7", border: "none",}} onClick={()=>setTruckVisible(true)}>Привязать контроллер</Button>
         </div>
       </div> :
       <div style ={{height: "auto", width: "100%", marginTop: "20px", marginLeft: "20px", fontSize: "20px"}}>

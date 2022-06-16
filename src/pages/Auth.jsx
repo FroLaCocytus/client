@@ -22,6 +22,7 @@ const Auth = observer(() => {
         user.setIsAuth(true)
         user.setRole(data.role)
         user.setCompany(data.companyId)
+        user.setLogin(data.login)
       })
       navigate('/')
     } catch (e) {

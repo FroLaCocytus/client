@@ -6,9 +6,19 @@ export default class UserStore {
     this._user = {};
     this._role = {};
     this._company = {};
+    this._login = {};
 
     makeAutoObservable(this);
   }
+
+  setLogin(login) {
+    this._login = login;
+  }
+
+  get login() {
+    return this._login;
+  }
+  
 
   setCompany(company) {
     this._company = company;

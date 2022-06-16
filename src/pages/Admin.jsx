@@ -16,6 +16,7 @@ const Admin = () => {
     user.setIsAuth(false)
     user.setRole({})
     user.setCompany({})
+    user.setLogin({})
     localStorage.removeItem('token')
   }
 

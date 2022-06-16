@@ -9,9 +9,11 @@ export const fetchCompanies = async () => {
     const {data} = await $authHost.get('api/company')
     return data
 }
-/*
-export const fetchOneCompanies = async (id) => {
-    const {data} = await $authHost.get('api/company')
-    return data
+
+export const fetchOneCompany = async (id) => {
+    const {data} = await $authHost.get('api/company/one', {params: {
+        id
+    }})
+    return data 
 }
-*/
+

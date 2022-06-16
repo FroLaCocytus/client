@@ -46,7 +46,7 @@ const Shell = observer(( {selectedItem, children} ) => {
             fontWeight: "500",
             fontSize: "22px",
             margin: "30px 50px 10px",
-            color: "rgba(0, 0, 0, .5)",
+            color: "#6C92D7",
           }}>Запущена</div> 
           :
           <div style={{
@@ -54,7 +54,7 @@ const Shell = observer(( {selectedItem, children} ) => {
             fontWeight: "500",
             fontSize: "22px",
             margin: "30px 50px 10px",
-            color: "rgba(0, 0, 0, .5)",
+            color: "#6C92D7",
           }}>Не запущена</div> 
           }
         </div>

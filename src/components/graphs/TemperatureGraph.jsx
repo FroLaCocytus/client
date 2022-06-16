@@ -41,6 +41,7 @@ const TemperatureGraph = observer(() => {
         theme={VictoryTheme.material}
         width={1200}
         height={500}
+
       >
       <VictoryAxis dependentAxis />
       <VictoryAxis
@@ -62,6 +63,7 @@ const TemperatureGraph = observer(() => {
       <VictoryScatter 
         style={{data: {fill: 'red'},  cursor: "click"}}
         size={5} 
+
         data={dataArr} 
       />
       </VictoryChart>
