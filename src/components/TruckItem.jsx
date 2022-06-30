@@ -10,18 +10,18 @@ const TruckItem = ({truck, setSelectedItem}) => {
 
 
   return (
-    <Col md={4}  style={{marginBottom: "25px"}}>
+    <Col md={4}  style={{marginBottom: "40px"}}>
         <Card style ={{
           padding: "0",
-          width: "280px",
-          height: "285px",
+          width: "15.6vw",
+          height: "32vh",
           cursor: "pointer",
           backgroundColor: "#E9F1FB",
           borderRadius: "8px",
           fontFamily: "'Montserrat', sans-serif"
         }} border={"light"} onClick={() => setSelectedItem(truck)}>
-            <Image width={250} height={250} style={{margin: "20px auto 10px", display: "block" }} src={imageTruck}/>
-            <div style={{marginLeft: "20px", fontWeight: "600", fontSize: "20px", height: "auto" }}>{truck.number}</div>
+            <Image style={{ width:"13vw", height:"25.7vh", margin: "20px auto 10px", display: "block" }} src={imageTruck}/>
+            <div style={{marginLeft: "1vw", fontWeight: "600", fontSize: "1.1vmax", height: "auto" }}>{truck.number}</div>
             <div style={{display: "flex", justifyContent: "space-around", alignItems: "center", width: "100%", }}>
               <Button style={{ 
                 backgroundColor: "#E9F1FB",
@@ -30,8 +30,9 @@ const TruckItem = ({truck, setSelectedItem}) => {
                 borderRadius: "8px",
                 fontFamily: "'Montserrat', sans-serif",
                 fontWeight: "500",
-                fontSize: "15px",
-                width: "110px"
+                fontSize: "0.7vmax",
+                width: "5.72vw",
+                height: "3.9vh"
               }} variant="primary">Описание</Button>
               <Button style={{ 
                 backgroundColor: "#6C92D7",
@@ -39,8 +40,9 @@ const TruckItem = ({truck, setSelectedItem}) => {
                 borderRadius: "8px",
                 fontFamily: "'Montserrat', sans-serif",
                 fontWeight: "500",
-                fontSize: "15px",
-                width: "110px"
+                fontSize: "0.7vmax",
+                width: "5.72vw",
+                height: "3.9vh"
               }} 
               variant="primary"
               onClick={() => navigate(TRUCK_ROUTE + '/' + truck.id)}>Перейти</Button>
@@ -52,9 +54,3 @@ const TruckItem = ({truck, setSelectedItem}) => {
 
 export default TruckItem;
 
-/*            
-
-  <div>{truck.model}</div>
-  <Circle truck={truck}/>
-
-*/

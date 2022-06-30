@@ -10,15 +10,16 @@ const TruckSearch = observer(() => {
         <Form.Control
             placeholder={'Введите номер автомобиля'} 
             style={{
-                marginLeft: "30px",
-                marginTop: "30px",
-                width: "500px",
-                height: "50px",
+                marginLeft: "1.56vw",
+                marginTop: "3.09vh",
+                width: "26vw",
+                height: "5.15vh",
                 backgroundColor: "#E9F1FB",
                 display: "inline-block",
                 fontFamily: "'Montserrat', sans-serif",
                 fontWeight: "500",
-                borderRadius: "10px"
+                borderRadius: "10px",
+                fontSize: "0.83vmax"
             }}
         />
     </div>

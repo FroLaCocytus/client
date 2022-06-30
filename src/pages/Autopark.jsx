@@ -34,17 +34,18 @@ const Autopark = observer(() => {
       <Shell setSelectedItem={setSelectedItem} selectedItem={selectedItem}>
           <TruckSearch/>
           <Button style={{
-            height: "50px",
+            height: "5.15vh",
             position: "absolute",
             top: "0",
             right: "0",
-            marginRight: "30px",
-            marginTop: "30px",
+            marginRight: "2vw",
+            marginTop: "3.09vh",
             backgroundColor: "#6C92D7",
             border: "none",
             fontFamily: "'Montserrat', sans-serif",
             fontWeight: "500",
-            borderRadius: "10px"
+            borderRadius: "10px",
+            fontSize: "0.83vmax"
           }} onClick = {()=>setTruckVisible(true)}>Добавить транспортное средство</Button>
           <TruckPaggination/>
           <TruckList setSelectedItem={setSelectedItem} />

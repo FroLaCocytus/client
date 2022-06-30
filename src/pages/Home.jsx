@@ -28,18 +28,18 @@ const Home = observer(() => {
             height: "auto",
             fontFamily: "'Montserrat', sans-serif",
             fontWeight: "600",
-            fontSize: "40px",
-            marginLeft: "60px",
-            marginTop: "40px"
+            fontSize: "2.25vmax",
+            marginLeft: "3.1vw",
+            marginTop: "4.1vh"
           }}>Добро пожаловать <span style={{color: "#6C92D7"}}>{user.login}</span></div>
 
           <div style={{
             height: "auto",
             fontFamily: "'Montserrat', sans-serif",
             fontWeight: "600",
-            fontSize: "30px",
-            marginLeft: "60px",
-            marginTop: "30px"
+            fontSize: "1.5vmax",
+            marginLeft: "3.1vw",
+            marginTop: "3.1vh"
           }}>Вы представитель компании <span style={{color: "#6C92D7"}}>{name}</span></div>
       </Shell>
   );

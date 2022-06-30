@@ -32,7 +32,7 @@ const Auth = observer(() => {
 
   return (
     <Container className="h-100 d-flex justify-content-center align-items-center p-0 m-0" style={{height:window.innerHeight - 54}}>
-      <Card style={{height:300, width:500}}  className="p-5">
+      <Card style={{height:"39.8vh", width:"32.6vw"}}  className="p-5">
         <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: "600", fontSize: "25px"}} className="m-auto">Вход на платформу</h2>
         <Form className="d-flex flex-column">
           <Form.Control 

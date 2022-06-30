@@ -25,8 +25,8 @@ const TruckPaggination = observer(() => {
   return (
     <div style={{
       height: "auto",
-      marginTop: "50px",
-      marginLeft: "30px",
+      marginTop: "5.15vh",
+      marginLeft: "1.56vw",
       fontFamily: "'Montserrat', sans-serif",
       display:" flex",
       justifyContent: "space-between"
@@ -34,25 +34,25 @@ const TruckPaggination = observer(() => {
       <div style={{display: "block"}}>
         <div style={{
           fontWeight: "600",
-          fontSize: "25px"
+          fontSize: "1.40vmax"
         }}>Ваш автопарк</div>
         <div style={{
-          marginTop: "20px",
-          marginBottom: "20px",
+          marginTop: "2.06vh",
+          marginBottom: "2.06vh",
           fontWeight: "500",
-          fontSize: "20px"
+          fontSize: "1.05vmax"
         }}>{truck.totalCount + " "} {carEnding(truck.totalCount, ["машина", "машины", "машин"])}</div>
       </div>
       <div style={{
-        marginTop: "20px",
-        marginRight: "80px",
+        marginTop: "2.06vh",
+        marginRight: "4.1vw",
         fontWeight: "600",
-        fontSize: "40px",
+        fontSize: "2vmax",
         display: "flex",
         alignItems: "center",
       }}>
         <AiOutlineLeft style={{cursor: "pointer"}} onClick = {()=> {if (truck.page!=1) truck.setPage(truck.page-1) }}/>
-        <div style={{fontSize: "30px", marginLeft: "10px", marginRight: "10px", width: "20px", textAlign: "center",  }}>{truck.page}</div>
+        <div style={{fontSize: "1.5vmax", marginLeft: "0.5vw", marginRight: "0.5vw", width: "1vw", textAlign: "center",  }}>{truck.page}</div>
         <AiOutlineRight style={{cursor: "pointer"}} onClick = {()=>{if (truck.page<pages.length) truck.setPage(truck.page+1) }}/>
       </div>
     </div>

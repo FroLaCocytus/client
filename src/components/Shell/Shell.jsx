@@ -35,28 +35,16 @@ const Shell = observer(( {selectedItem, children} ) => {
       <div className="box">
         {selectedItem != "none" && selectedItem &&
         <div style={{height: "auto"}}>
-          <div style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: "500", fontSize: "30px", margin: "150px 50px 10px" }}>{selectedItem.model}</div>
-          <Image width={500} height={500} style={{ margin: "20px auto 10px" }} src={imageTruck}/>
-          <div style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: "500", fontSize: "30px", margin: "10px 50px 10px" }}>{selectedItem.number}</div>
-          {
-          selectedItem.enabled 
-          ? 
+          <div style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: "500", fontSize: "1.6vmax", margin: "15.5vh 2.6vw 1vh" }}>{selectedItem.model}</div>
+          <Image style={{ width: "26vw", height: "33vh", margin: "2.06vh auto 1vh" }} src={imageTruck}/>
+          <div style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: "500", fontSize: "1.6vmax", margin: "1vh 2.6vw 1vh" }}>{selectedItem.number}</div>
           <div style={{
             fontFamily: "'Montserrat', sans-serif",
             fontWeight: "500",
-            fontSize: "22px",
-            margin: "30px 50px 10px",
+            fontSize: "1.2vmax",
+            margin: "3.1vh 2.6vw 1vh",
             color: "#6C92D7",
-          }}>Запущена</div> 
-          :
-          <div style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: "500",
-            fontSize: "22px",
-            margin: "30px 50px 10px",
-            color: "#6C92D7",
-          }}>Не запущена</div> 
-          }
+          }}>{selectedItem.enabled ? 'Запущена' : 'Не запущена'}</div> 
         </div>
         }
         <Exit/>

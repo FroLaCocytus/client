@@ -5,7 +5,7 @@ import {fetchTemperature} from "../../http/deviceAPI";
 import { observer } from 'mobx-react-lite';
 
 
-const TemperatureGraph = observer(() => {
+const TemperatureGraph = observer(({refresh}) => {
   const {device} = useContext(Context)
   const [visible, setVisible] = useState(false)
   const [dataArr, setDataArr] = useState([])
@@ -31,7 +31,7 @@ const TemperatureGraph = observer(() => {
         setVisible(true)
       }
     })
-  }, [])
+  }, [refresh])
 
 
   return (
@@ -57,7 +57,7 @@ const TemperatureGraph = observer(() => {
           data: { stroke: "#c43a31" },
           parent: { border: "1px solid #ccc"}
         }}
-
+        domain={{y: [20, 35]}}
         data={dataArr}
       />
       <VictoryScatter 

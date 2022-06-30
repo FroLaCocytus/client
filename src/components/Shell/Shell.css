@@ -9,39 +9,35 @@
 
 main{
     position: absolute;
-    margin-left: 230px;
-    margin-right: 500px;
-    width: calc(100% - 230px - 500px);
+    margin-left: 12vw;
+    margin-right: 26vw;
+    width: calc(100vw - 12vw - 26vw);
     height: 100%;
 }
 .sidebar{
     position: absolute;
     background: #E9F1FB;
     height: 100%;
-    width: 230px;
+    width: 12vw;
     transition: all 0.5s;
 }
 .box {
     height: 100%;
-    width: 500px;
+    width: 26vw;
     top:0;
     right: 0;
     background-color: #E9F1FB;
     position: absolute;
 }
 .top_section{
-    display: flex;
     align-items:center;
     padding:20px 15px;
-    height: 100px;
+    height: 10.3vh;
+    margin-top: 2vh;
 }
 .logo{
-    width: 160px;
-    height: 48px;
-    margin-left: 10px;
-    margin-top: 60px;
     text-align: center;
-    font-size: 26px;
+    font-size: 1.35vw;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     letter-spacing: 0;
@@ -51,18 +47,18 @@ main{
 }
 .list {
     height: auto;
-    padding-top: 100px;
-    margin-left: 10px;
+    padding-top: 10.3vh;
+    margin-left: 0.5vw;
 }
 .link{
     display: flex;
     color: #717A7F;
-    margin-top: 40px;
-    margin-bottom: 60px;
+    margin-top: 6.2vh;
+  
 
     width: 100%;
-    height: 40px;
-    gap: 15px;
+    height: 4.1vh;
+    gap: 0.8vw;
     transition: all 0.5s;
 }
 .link:hover{
@@ -73,15 +69,15 @@ main{
     color: #6C92D7;
 }
 .icon {
-    padding-left: 25px;
+    padding-left: 1.3vw;
     line-height: 100%;
-    font-size: 30px;
+    font-size: 1.5vmax;
 }
 
 .link_text {
-    padding-top: 10px;
+    padding-top: 1vh;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 0.85vmax;
 }
 

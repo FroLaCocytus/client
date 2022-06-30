@@ -35,7 +35,7 @@ const UpdateKey = ({setTruckNow, show, onHide}) => {
       onHide={onHide}
       size="lg"
       centered
-      style={{height: "auto"}}
+      style={{height: "auto", fontFamily: "'Montserrat', sans-serif",}}
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">

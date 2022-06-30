@@ -6,7 +6,6 @@ const Exit = () => {
     const {user} = useContext(Context)
     const {truck} = useContext(Context)
 
-
     const logOut = () => {
         user.setUser({})
         user.setIsAuth(false)
@@ -22,10 +21,10 @@ const Exit = () => {
             position: "absolute",
             top: "0",
             right: "0",
-            marginTop: "10px",
-            marginRight: "30px",
-            width: "50px",
-            height: "50px",
+            marginTop: "2vh",
+            marginRight: "1.56vw",
+            width: "2.6vmax",
+            height: "2.6vmax",
             background: "black",
             borderRadius: "50%"
         }}>
@@ -33,15 +32,20 @@ const Exit = () => {
         {listVisible &&             
             <ul className="list-group" style = {{
                 height: "auto", 
-                width: "100px", 
+                width: "5.2vw", 
                 cursor: "pointer",
                 position: "absolute",
                 top: "0",
                 right: "0",
-                marginTop: "60px",
-                marginRight: "30px"
+                marginTop: "7.5vh",
+                marginRight: "1.5vw"
             }}>
-                <li onClick={logOut} className="list-group-item">Выйти</li>
+                <li style={{ 
+                    fontFamily: "'Montserrat', sans-serif", 
+                    fontWeight: "500", 
+                    fontSize:"0.8vmax", 
+                    textAlign: "center"
+                    }} onClick={logOut} className="list-group-item">Выйти</li>
             </ul>
         }
     </div>

@@ -5,7 +5,7 @@ import { Context } from "../../index";
 
 import { observer } from 'mobx-react-lite';
 
-const HumidityGraph = observer(() => {
+const HumidityGraph = observer(({refresh}) => {
   const {device} = useContext(Context)
   const [visible, setVisible] = useState(false)
   const [dataArr, setDataArr] = useState([])
@@ -32,7 +32,7 @@ const HumidityGraph = observer(() => {
       setVisible(true)
 
     })
-  }, [])
+  }, [refresh])
   console.log(device.humidityXY)
   return (
     <div>
@@ -56,7 +56,7 @@ const HumidityGraph = observer(() => {
           data: { stroke: "blue" },
           parent: { border: "1px solid #ccc"}
         }}
-
+        domain={{y: [0, 100]}}
         data={dataArr}
       />
       <VictoryScatter 
